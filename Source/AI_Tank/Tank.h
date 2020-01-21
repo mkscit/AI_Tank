@@ -23,6 +23,7 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
 		void AIMoveForward(float Axis);
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
 		void AITurnLR(float Axis);
 
