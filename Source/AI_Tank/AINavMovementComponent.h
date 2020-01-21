@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class AI_TANK_API UAINavMovementComponent : public UNavMovementComponent
 {
 	GENERATED_BODY()
