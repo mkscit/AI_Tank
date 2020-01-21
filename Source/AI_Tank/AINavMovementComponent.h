@@ -14,5 +14,8 @@ UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class AI_TANK_API UAINavMovementComponent : public UNavMovementComponent
 {
 	GENERATED_BODY()
+
+
+	virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;
 	
 };
