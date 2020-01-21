@@ -7,4 +7,10 @@ void UAINavMovementComponent::RequestDirectMove(const FVector& MoveVelocity, boo
 {
 	ATank* Tank = Cast<ATank>(GetOwner());
 	if (!Tank) return;
+
+	auto TankForwardRotator = GetOwner()->GetActorForwardVector().Rotation();
+	auto AIForwardIntentionRotator = MoveVelocity.GetSafeNormal().Rotation();
+	auto DeltaRotator = AIForwardIntentionRotator - TankForwardRotator;
+	Tank->AddActorWorldRotation(FRotator(0, DeltaRotator.Yaw, 0));
+	Tank->AIMoveForward(1);
 }
