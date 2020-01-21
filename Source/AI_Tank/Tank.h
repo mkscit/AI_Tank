@@ -20,6 +20,12 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
+		void AIMoveForward(float Axis);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Output")
+		void AITurnLR(float Axis);
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
